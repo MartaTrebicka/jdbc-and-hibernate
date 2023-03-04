@@ -19,5 +19,23 @@ public class LambdaExercises {
             }
         };
         anonymousClassReference.silnoreki();
+
+
+        //ROBIENIE LAMBDY
+        // () parenthesis - arguments list
+        // -> arguments, body separator
+        // {} parenthesis - method body
+
+
+
+        BoysDontCry firstLambda = () -> {};  //metoda silnoreki jest void i jest pusta (bo silboreki () i pusty nawias)
+BoysDontCry secondLambda = () -> System.out.println("Lambda");
+
+secondLambda.silnoreki(); // żeby to wypisać na konsoli
+
+        BoysDontCry thirdLambda= () -> {
+            System.out.println("one");
+            System.out.println("second");
+        };
     }
 }
