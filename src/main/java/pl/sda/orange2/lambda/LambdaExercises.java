@@ -47,10 +47,13 @@ secondLambda.silnoreki(); // żeby to wypisać na konsoli
         };
         CoffeeMaker myCoffeeMaker3 = (int water, String coffeeType) -> {
             System.out.println("Coffee brewing...");
-            return "my coffee";
+            return "Java Latte";
         };
-        CoffeeMaker shortVersion = (water, coffeeType) -> "my coffee";
+        String myCoffee = myCoffeeMaker3.prepare(5, "Small");
+        System.out.println("my coffe is ready: " + myCoffee);
 
+        CoffeeMaker shortVersion = (water, coffeeType) -> "my coffee";
+shortVersion.prepare(5,"Large Java coffee");
 
     }
 }
