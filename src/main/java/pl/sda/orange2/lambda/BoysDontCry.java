@@ -8,5 +8,6 @@ public interface BoysDontCry {
 
     void silnoreki();
 
-    default void cry() {}// rozszerzenie interface. ale inni użytkownicy dzieki temu,że to default nie muszą tego u siebie aktualizować jakby
+    default void cry() {
+    }// rozszerzenie interface. ale inni użytkownicy dzieki temu,że to default nie muszą tego u siebie aktualizować jakby
 }

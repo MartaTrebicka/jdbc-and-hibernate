@@ -7,8 +7,8 @@ public class ChłopakiNiePłaczą implements BoysDontCry {
         System.out.println("Jestem Silnoręki");
     }
 
-  public void sing() {  // metoda
-      System.out.println("Ruszaj się ......");
+    public void sing() {  // metoda
+        System.out.println("Ruszaj się ......");
 
-  }
+    }
 }

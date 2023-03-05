@@ -6,7 +6,7 @@ public class LambdaExercises {
         BoysDontCry boy = new ChłopakiNiePłaczą();// obiekt
         boy.silnoreki();
 
-        ((ChłopakiNiePłaczą)boy).sing();// rzutowanie
+        ((ChłopakiNiePłaczą) boy).sing();// rzutowanie
 
         ChłopakiNiePłaczą boy2 = new ChłopakiNiePłaczą();
         boy2.sing();
@@ -27,13 +27,13 @@ public class LambdaExercises {
         // {} parenthesis - method body
 
 
+        BoysDontCry firstLambda = () -> {
+        };  //metoda silnoreki jest void i jest pusta (bo silboreki () i pusty nawias)
+        BoysDontCry secondLambda = () -> System.out.println("Lambda");
 
-        BoysDontCry firstLambda = () -> {};  //metoda silnoreki jest void i jest pusta (bo silboreki () i pusty nawias)
-BoysDontCry secondLambda = () -> System.out.println("Lambda");
+        secondLambda.silnoreki(); // żeby to wypisać na konsoli
 
-secondLambda.silnoreki(); // żeby to wypisać na konsoli
-
-        BoysDontCry thirdLambda= () -> {
+        BoysDontCry thirdLambda = () -> {
             System.out.println("one");
             System.out.println("second");
         };
@@ -41,7 +41,7 @@ secondLambda.silnoreki(); // żeby to wypisać na konsoli
         System.out.println("_________________________");
         System.out.println("Coffee time");
 
-       CoffeeMaker myCoffeeMaker = (int water, String coffeeType) -> "my coffe"; // Typ interface. po = dajemy parametry metody. a po -> co wywołujemy
+        CoffeeMaker myCoffeeMaker = (int water, String coffeeType) -> "my coffe"; // Typ interface. po = dajemy parametry metody. a po -> co wywołujemy
         CoffeeMaker myCoffeeMaker2 = (int water, String coffeeType) -> {
             return "my coffee";
         };
@@ -53,7 +53,7 @@ secondLambda.silnoreki(); // żeby to wypisać na konsoli
         System.out.println("my coffe is ready: " + myCoffee);
 
         CoffeeMaker shortVersion = (water, coffeeType) -> "my coffee";
-shortVersion.prepare(5,"Large Java coffee");
+        shortVersion.prepare(5, "Large Java coffee");
 
     }
 }
