@@ -34,7 +34,7 @@ public class CarDao implements DataAccess<Car, Long> {
             saveQuery = """
                     UPDATE CARS
                     SET COLOUR = ?, BRAND = ?, MODEL = ?
-                    WHERE ID = ?               
+                    WHERE ID = ?             
                     """;
         } else {
             // insert
