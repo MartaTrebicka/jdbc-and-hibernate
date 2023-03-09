@@ -9,7 +9,6 @@ import java.sql.SQLException;
 
 public class CarDaoExample {
     public static void main(String[] args) {
-
         System.out.println("Car dao example");
         System.out.println("Reading all cars from db");
 
@@ -19,16 +18,19 @@ public class CarDaoExample {
                     H2Config.PASSWORD);
 
             CarDao carDao = new CarDao(h2Connection);
-            var allCarsfromDb = carDao.findAll();
-            System.out.println("All cars from db: " + allCarsfromDb);
+            var allCarsFromDb = carDao.findAll();
+            System.out.println("All cars from db: " + allCarsFromDb);
 
-            System.out.println("Finding car by id:" );
+            System.out.println("Finding car by id");
             System.out.println("First with existing id");
             Car existingCar = carDao.findById(1L);
             System.out.println("Existing car: " + existingCar);
+
+            System.out.println("Now with non existent id");
+            Car nullCar = carDao.findById(5L);
+            System.out.println("Non existent car: " + nullCar);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
